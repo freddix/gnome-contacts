@@ -1,11 +1,11 @@
 Summary:	Contacts manager for GNOME
 Name:		gnome-contacts
-Version:	3.6.2
+Version:	3.8.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.6/%{name}-%{version}.tar.xz
-# Source0-md5:	6af361b582015287d57760d491dc6e34
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.8/%{name}-%{version}.tar.xz
+# Source0-md5:	e05fb4992de310fd09a91fcf0e1188d0
 URL:		https://live.gnome.org/ThreePointOne/Features/Contacts
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -48,10 +48,9 @@ Search result provider for GNOME Shell.
 %setup -q
 
 %build
-mkdir m4
-%{__intltoolize}
 %{__libtoolize}
-%{__aclocal} -I m4
+%{__intltoolize}
+%{__aclocal} -I m4 -I libgd
 %{__autoheader}
 %{__autoconf}
 %{__automake}
@@ -80,6 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README NEWS TODO ChangeLog
 %attr(755,root,root) %{_bindir}/gnome-contacts
+%{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
 %{_desktopdir}/%{name}.desktop
 
