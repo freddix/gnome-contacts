@@ -1,24 +1,24 @@
 Summary:	Contacts manager for GNOME
 Name:		gnome-contacts
-Version:	3.8.3
+Version:	3.10
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	a113a11c6d2390f2613ae984922c63a1
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.10/%{name}-%{version}.tar.xz
+# Source0-md5:	ab5e23b09cff8974a304e4a6a014972c
 URL:		https://live.gnome.org/ThreePointOne/Features/Contacts
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cheese-devel
-BuildRequires:	evolution-data-server-devel
-BuildRequires:	folks-devel
+BuildRequires:	evolution-data-server-devel >= 3.10.0
+BuildRequires:	folks-devel >= 0.9.5
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel
-BuildRequires:	gnome-online-accounts-devel
-BuildRequires:	gtk+3-devel
+BuildRequires:	gnome-desktop-devel >= 3.10.0
+BuildRequires:	gnome-online-accounts-devel >= 3.10.0
+BuildRequires:	gtk+3-devel >= 3.10.0
 BuildRequires:	intltool
-BuildRequires:	libgee-devel
-BuildRequires:	libnotify-devel
+BuildRequires:	libgee-devel >= 0.12.0
+BuildRequires:	libnotify-devel >= 0.7.6
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	telepathy-glib-devel
