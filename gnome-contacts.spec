@@ -1,33 +1,33 @@
 Summary:	Contacts manager for GNOME
 Name:		gnome-contacts
-Version:	3.10
+Version:	3.12.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.10/%{name}-%{version}.tar.xz
-# Source0-md5:	ab5e23b09cff8974a304e4a6a014972c
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.12/%{name}-%{version}.tar.xz
+# Source0-md5:	f00c59f4bff59351d360c8865a67071e
 URL:		https://live.gnome.org/ThreePointOne/Features/Contacts
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	cheese-devel
-BuildRequires:	evolution-data-server-devel >= 3.10.0
+BuildRequires:	cheese-devel >= 3.12.0
+BuildRequires:	evolution-data-server-devel >= 3.12.0
 BuildRequires:	folks-devel >= 0.9.5
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel >= 3.10.0
-BuildRequires:	gnome-online-accounts-devel >= 3.10.0
-BuildRequires:	gtk+3-devel >= 3.10.0
+BuildRequires:	gnome-desktop-devel >= 3.12.0
+BuildRequires:	gnome-online-accounts-devel >= 3.12.0
+BuildRequires:	gtk+3-devel >= 3.12.0
 BuildRequires:	intltool
-BuildRequires:	libgee-devel >= 0.12.0
+BuildRequires:	libgee-devel >= 0.14.0
 BuildRequires:	libnotify-devel >= 0.7.6
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	telepathy-glib-devel
 Requires(post,postun):	glib-gio-gsettings
-Requires:	evolution-data-server
+Requires:	evolution-data-servear >= 3.12.0
 Requires:	folks
-Requires:	gnome-online-accounts
+Requires:	gnome-online-accounts >= 3.12.0
 Requires:	telepathy-mission-control
-Suggests:	cheese
+Suggests:	cheese >= 3.12.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_libexecdir	%{_libdir}/gnome-contacts
