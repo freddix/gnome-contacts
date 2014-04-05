@@ -1,7 +1,7 @@
 Summary:	Contacts manager for GNOME
 Name:		gnome-contacts
 Version:	3.12.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications/Communications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.12/%{name}-%{version}.tar.xz
@@ -23,7 +23,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	telepathy-glib-devel
 Requires(post,postun):	glib-gio-gsettings
-Requires:	evolution-data-servear >= 3.12.0
+Requires:	evolution-data-server >= 3.12.0
 Requires:	folks
 Requires:	gnome-online-accounts >= 3.12.0
 Requires:	telepathy-mission-control
