@@ -1,23 +1,22 @@
 Summary:	Contacts manager for GNOME
 Name:		gnome-contacts
-Version:	3.12.0
-Release:	2
+Version:	3.14.0
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Communications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	f00c59f4bff59351d360c8865a67071e
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-contacts/3.14/%{name}-%{version}.tar.xz
+# Source0-md5:	867bed6e9dbee5a6be6ec2e6d052340c
 URL:		https://live.gnome.org/ThreePointOne/Features/Contacts
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	cheese-devel >= 3.12.0
-BuildRequires:	evolution-data-server-devel >= 3.12.0
-BuildRequires:	folks-devel >= 0.9.5
+BuildRequires:	cheese-devel >= 3.14.0
+BuildRequires:	folks-devel >= 0.10.0
 BuildRequires:	gettext-devel
-BuildRequires:	gnome-desktop-devel >= 3.12.0
-BuildRequires:	gnome-online-accounts-devel >= 3.12.0
-BuildRequires:	gtk+3-devel >= 3.12.0
+BuildRequires:	gnome-desktop-devel >= 3.14.0
+BuildRequires:	gnome-online-accounts-devel >= 3.14.0
+BuildRequires:	gtk+3-devel >= 3.14.0
 BuildRequires:	intltool
-BuildRequires:	libgee-devel >= 0.14.0
+BuildRequires:	libgee-devel >= 0.16.0
 BuildRequires:	libnotify-devel >= 0.7.6
 BuildRequires:	libtool
 BuildRequires:	pkg-config
@@ -25,9 +24,9 @@ BuildRequires:	telepathy-glib-devel
 Requires(post,postun):	glib-gio-gsettings
 Requires:	evolution-data-server >= 3.12.0
 Requires:	folks
-Requires:	gnome-online-accounts >= 3.12.0
+Requires:	gnome-online-accounts >= 3.14.0
 Requires:	telepathy-mission-control
-Suggests:	cheese >= 3.12.0
+Suggests:	cheese >= 3.14.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_libexecdir	%{_libdir}/gnome-contacts
@@ -79,14 +78,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README NEWS ChangeLog
 %attr(755,root,root) %{_bindir}/gnome-contacts
+%{_datadir}/dbus-1/services/org.gnome.Contacts.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
-%{_desktopdir}/%{name}.desktop
+%{_desktopdir}/org.gnome.Contacts.desktop
 
 %files shell-search-provider
 %defattr(644,root,root,755)
 %dir %{_libexecdir}
 %attr(755,root,root) %{_libexecdir}/gnome-contacts-search-provider
 %{_datadir}/dbus-1/services/org.gnome.Contacts.SearchProvider.service
-%{_datadir}/gnome-shell/search-providers/gnome-contacts-search-provider.ini
+%{_datadir}/gnome-shell/search-providers/org.gnome.Contacts.search-provider.ini
 
